@@ -1,0 +1,60 @@
+body {
+	background-image: url("images/background.jpg"); 
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    font-family: 'abaddon-webfont', cursive;
+}
+
+@font-face {
+	font-family: 'abaddon-webfont';
+	font-style: normal;
+ 	font-weight: 400;
+ 	src: local('abaddon-webfont'), local('abaddon-webfont'), url("images/abaddon-webfont.woff") format('woff');
+}
+
+#title {
+	text-align:center;
+	font-size:45px;
+	text-shadow: 2px 2px rgba(5,205,255,0.56);
+}
+
+#instructText{
+	font-size:25px;
+	background-color: rgba(253,245,255,0.6);
+	text-shadow: 1px 1px rgba(255,255,255,255);
+	padding:5px;
+	font-weight: bolder;s
+}
+
+img {
+	height:175px;
+	width: 175px
+}
+
+#crystalRow{
+	text-align: center;
+}
+
+#randomComNumber, #playerScore, #scoreCard {
+	font-size:25px;
+	text-align: center;
+	color:white;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    border-style: inset;
+    text-shadow: 2px 2px #055cff;
+}	
+
+#resultDivLoss{
+	font-size: 30px;
+	text-align: center;
+	color: red;
+}
+
+#resultDivWin{
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
