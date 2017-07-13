@@ -1,11 +1,10 @@
 var wins = 0;
 var losses = 0;
 var playerScore = 0;
-var gameOver = false;
 
 $(document).ready(function() {
     gameStart();
-
+//crystal 1
     $("#Object1").on("click", function() {
         playerScore = playerScore + crystal1;
         console.log("Player's Score = " + playerScore);
@@ -13,18 +12,18 @@ $(document).ready(function() {
         if (playerScore === randomNumber) {
             wins++;
             $("#win").html("Wins: " + wins);
-            $("#resultDivWin").html("EPIC MATH!!!"); //tinkering with resul announcement.
+            $("#resultDivWin").html("EPIC MATH!!!"); //tinkering with win announcement.
             gameStart();
         }
         if (playerScore > randomNumber) {
             losses++;
             $("#loss").html("Losses: " + losses);
-            $("#resultDivLoss").html("Mistakes were made."); //see above
+            $("#resultDivLoss").html("Mistakes were made."); //tinkering with loss announcement
             gameStart();
         }
 
     });
-
+//crystal 2
     $("#Object2").on("click", function() {
         playerScore = playerScore + crystal2;
         console.log("Player's Score = " + playerScore);
@@ -41,7 +40,7 @@ $(document).ready(function() {
         }
 
     });
-
+//crystal 3
     $("#Object3").on("click", function() {
         playerScore = playerScore + crystal3;
         console.log("Player's Score = " + playerScore);
@@ -58,7 +57,7 @@ $(document).ready(function() {
         }
 
     });
-
+//crystal 4
     $("#Object4").on("click", function() {
         playerScore = playerScore + crystal4;
         console.log("Player's Sore = " + playerScore);
@@ -80,12 +79,13 @@ $(document).ready(function() {
 
 });
 
+//function reset variables at game start
 function gameStart() {
     randomInt();
     playerScore = 0;
     $("#displayPlayerTotal").text(playerScore);
-    $("#resultDivWin").html("");
-    $("#resultDivLoss").html("");
+    $("#resultDivWin").html("");//WIP
+    $("#resultDivLoss").html("");//WIP
 
     //var crystal1 = Math.floor(Math.random() * 12 + 1);
     crystalRan1();
@@ -97,12 +97,13 @@ function gameStart() {
     crystalRan4();
 }
 
+//function to choose random number to beat and log it to the screen
 function randomInt() {
     randomNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
     console.log(randomNumber);
-    $("#randomPick").text(randomNumber);
+    $("#randomPick").text(randomNumber);//logs random number to screen
 }
-
+//functions to define each crystal's random number
 function crystalRan1() {
     crystal1 = Math.floor(Math.random() * 12 + 1);
     console.log(crystal1);
